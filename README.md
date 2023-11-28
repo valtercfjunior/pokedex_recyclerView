@@ -14,7 +14,7 @@
 
 
 <h1 align="center">
-    <img src="assets/mock_pokedex.png" style="width: 800px; border-radius:10px " >
+    <img src="assets/mock_pokedex_2.png" style="width: 800px; border-radius:10px " >
     
     
 </h1>
