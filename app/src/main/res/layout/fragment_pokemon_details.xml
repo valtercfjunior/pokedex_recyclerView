@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_details_pokemon"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".view.PokemonDetailsFragment">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/ic_pokeball"
+        app:layout_constraintEnd_toStartOf="@id/txt_details_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#F44336" />
+
+    <TextView
+        android:id="@+id/txt_details_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/dm_sans_medium"
+        android:text="Charmander"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_details_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans_medium"
+        android:text="Nº 0016"
+        android:textColor="#6E6E6E"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_details_name" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_details_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#E8E4E2E2"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_details_number">
+
+        <ImageView
+            android:id="@+id/img_pokemon"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/charmander"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/types"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_details_image"
+        app:layout_goneMarginStart="5dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            app:cardCornerRadius="5dp">
+
+            <TextView
+                android:id="@+id/txt_type_detail_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#a4acaf"
+                android:fontFamily="@font/dm_sans_medium"
+                android:paddingHorizontal="40dp"
+                android:paddingVertical="5dp"
+                android:text="Type"
+                android:textColor="#212121"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp">
+
+            <TextView
+                android:id="@+id/txt_type_detail_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#a4acaf"
+                android:fontFamily="@font/dm_sans_medium"
+                android:paddingHorizontal="40dp"
+                android:paddingVertical="5dp"
+                android:text="Grass"
+                android:textColor="#212121"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/infos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#30A7D7"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/types">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            >
+
+            <TextView
+                android:id="@+id/label_details_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/dm_sans_medium"
+                android:text="Height"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txt_details_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/dm_sans_medium"
+                android:text="4"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/label_details_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/dm_sans_medium"
+                android:text="Weight"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/txt_details_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/dm_sans_medium"
+                android:text="60"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/label_details_abilities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/dm_sans_medium"
+                android:text="Abilities"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txt_details_abilitie_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/dm_sans_medium"
+                android:text="static"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/txt_details_abilitie_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/dm_sans_medium"
+                android:text="lightning-rod"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/txt_details_abilitie_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/dm_sans_medium"
+                android:text="lightning-rod"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/stats_hp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_hp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/infos"
+        app:tint="#F44336" />
+
+    <ImageView
+        android:id="@+id/stats_attack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_attack"
+        app:layout_constraintStart_toEndOf="@id/stats_hp"
+        app:layout_constraintTop_toBottomOf="@id/infos"
+        app:tint="#FF9800" />
+
+    <ImageView
+        android:id="@+id/stats_defense"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_defense"
+        app:layout_constraintStart_toEndOf="@id/stats_attack"
+        app:layout_constraintTop_toBottomOf="@id/infos"
+        app:tint="#009688" />
+
+    <ImageView
+        android:id="@+id/stats_special_attack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_special_attack"
+        app:layout_constraintStart_toEndOf="@id/stats_defense"
+        app:layout_constraintTop_toBottomOf="@id/infos"
+        app:tint="#9C27B0" />
+
+    <ImageView
+        android:id="@+id/stats_speed"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_speed"
+        app:layout_constraintStart_toEndOf="@id/stats_special_attack"
+        app:layout_constraintTop_toBottomOf="@id/infos"
+        app:tint="#2196F3" />
+
+    <TextView
+        android:id="@+id/stats_txt_hp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/dm_sans_medium"
+        android:text="35"
+        android:textColor="#6E6E6E"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/stats_hp"
+        app:layout_constraintTop_toBottomOf="@id/stats_hp" />
+
+    <TextView
+        android:id="@+id/stats_txt_attack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/dm_sans_medium"
+        android:text="35"
+        android:textColor="#6E6E6E"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/stats_attack"
+        app:layout_constraintTop_toBottomOf="@id/stats_attack" />
+
+    <TextView
+        android:id="@+id/stats_txt_defense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/dm_sans_medium"
+        android:text="35"
+        android:textColor="#6E6E6E"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/stats_defense"
+        app:layout_constraintTop_toBottomOf="@id/stats_defense" />
+
+    <TextView
+        android:id="@+id/stats_txt_special_attack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/dm_sans_medium"
+        android:text="35"
+        android:textColor="#6E6E6E"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/stats_special_attack"
+        app:layout_constraintTop_toBottomOf="@id/stats_special_attack" />
+
+    <TextView
+        android:id="@+id/stats_txt_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/dm_sans_medium"
+        android:text="35"
+        android:textColor="#6E6E6E"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/stats_speed"
+        app:layout_constraintTop_toBottomOf="@id/stats_speed" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

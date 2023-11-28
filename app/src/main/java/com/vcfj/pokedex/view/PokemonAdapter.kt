@@ -6,14 +6,19 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.vcfj.pokedex.R
 import com.vcfj.pokedex.domain.Pokemon
 
 class PokemonAdapter(
-    private val items: List<Pokemon?>
+    private val items: List<Pokemon?>,
+    var clickCard: ClickCard
 ) : RecyclerView.Adapter<PokemonAdapter.ViewHolder>() {
+
+
+
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -28,10 +33,21 @@ class PokemonAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
         holder.bindView(item)
+        holder.cardPokemon.setOnClickListener{
+            clickCard.clickCard(item!!)
+        }
+
+
 
     }
 
+
+    interface ClickCard {
+        fun clickCard(pokemon: Pokemon)
+    }
+
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val cardPokemon = itemView.findViewById<CardView>(R.id.card_pokemon)
         fun bindView(item: Pokemon?) {
             with(itemView) {
                 val img_pokemon = findViewById<ImageView>(R.id.img_pokemon)
